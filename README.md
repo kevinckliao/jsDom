@@ -1,2 +1,4 @@
 # jsDom
- test js with DOM
+test js with DOM
+
+範例： 台灣國小 109學年度 下學期 週數 ＆ 奇偶周計算 (開始第ㄧ周於 2021-02-21)
