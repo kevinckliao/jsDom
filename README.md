@@ -1,2 +1,2 @@
-# jsLab
- testing js with DOM
+# jsDom
+ test js with DOM
