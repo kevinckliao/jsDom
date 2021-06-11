@@ -2,17 +2,34 @@
 var dateStart = new Date("2021-02-21T00:00:00.000+08:00"); //reguest a UTC+8 timestamp of 2021/2/21
 //var dateStart = new Date("2021-06-09T00:00:00.000+08:00");
 
-var msStart = dateStart.getTime();
-var msNow = Date.now();  // you got Local, UTC+8, timestamp in ms
+//count time diff, calculate week# for even/odd weeks
+var msecStart = dateStart.getTime();
+var msecNow = Date.now();  // get msec of Local-Time
+var weekNo =  Math.floor((msecNow - msecStart) / ( 7* 24 * 3600000)) + 1;
 
-//var hourDiff = Math.floor ((msNow - msStart) / 3600000);
-//console.log(hourDiff);
+// get Today's Date & Week String
+const dateNow = new Date();
+const weekdayStr = [ '日','ㄧ','二','三','四','五','六' ];
 
-var weekNo =  Math.floor((msNow - msStart) / ( 7* 24 * 3600000)) + 1;
-console.log( weekNo );
+// assembly display string
+var msgWeek = '今天 ' + dateNow.toLocaleDateString() + ' 第' + weekNo + '周 星期' + weekdayStr[dateNow.getDay()] ;
+if ((weekNo % 2) == 0) {  msgWeek += " 偶數周"; } 
+else { msgWeek += " 奇數周"; }
 
-if ((weekNo % 2) == 0) {
-  console.log("偶數周");
-} else {
-  console.log("奇數周");
+console.log(msgWeek);
+
+//
+// check which session this time is
+//
+console.log('Now: ' + Date().toLocaleString().slice(16,21));
+
+function sessionNum () {
+  const timeStrNow =  Date().toLocaleString().slice(16,21) ;
+  
+  if ( timeStrNow >= "15:00" && timeStrNow <="15:40") { return 3; }
+  else return 0;
 }
+console.log( 'Current Session Number is ' + sessionNum());
+
+
+
