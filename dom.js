@@ -36,14 +36,18 @@ function sessionNum () {
 //
 function markSess (weekType, dayNum, sessNum) {
   var tableEl = document.getElementsByTagName('table') ;
-  console.log(tableEl);
+  //console.log(tableEl);
 
   cellEl = tableEl[weekType].getElementsByTagName('td');
-  //console.log(cellEl[ 5 + (dayNum-1) + sessNum*4]); 
+  //console.log(cellEl [5 + (dayNum-1) + sessNum*4]); 
   cellEl[ 5 + (dayNum-1) + sessNum*4].style.backgroundColor = '#fa520f' ;
+  cellEl[ 5 + (dayNum-1) + sessNum*4].style.color = '#ffffff' ;
+  console.log('even/odd: ' + weekType + ' day: ' + dayNum + '  sess: ' + sessNum);
 }
-//tableEl[5].style.backgroundColor = '#99999999' ;
 
+//test it
 markSess(0,2,1);
 markSess(0,3,0);
 markSess(1,1,0);
+markSess(1,3,2);
+
