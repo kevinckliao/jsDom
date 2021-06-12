@@ -40,8 +40,10 @@ function markSess (weekType, dayNum, sessNum) {
 
   cellEl = tableEl[weekType].getElementsByTagName('td');
   //console.log(cellEl[ 5 + (dayNum-1) + sessNum*4]); 
-  cellEl[ 5 + (dayNum-1) + sessNum*4].style.backgroundColor = '#99999999' ;
+  cellEl[ 5 + (dayNum-1) + sessNum*4].style.backgroundColor = '#fa520f' ;
 }
 //tableEl[5].style.backgroundColor = '#99999999' ;
 
 markSess(0,2,1);
+markSess(0,3,0);
+markSess(1,1,0);
