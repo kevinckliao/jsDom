@@ -2,10 +2,84 @@
 <html>
     <head>
         <title>jsDom</title>
+        <style>
+            table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            }
+        
+            td, th {
+            border: 1px solid #eeae22c8;
+            text-align: left;
+            padding: 8px;
+            }
+        
+            tr:nth-child(even) {
+            background-color: #eeae22c8;
+            }
+            </style>
     </head>
 
     <body>
-        <h1>Hello!</h1>
+        <h1>Odd Weeks</h1>
+        <table id="week-odd">
+            <tr>
+                <td>TIME</td>
+                <td>MON</td>
+                <td>TUE</td>
+                <td>WED</td>
+            </tr>
+            <tr>
+                <td>08:00</td>
+                <td>MON-S0</td>
+                <td>TUE-S0</td>
+                <td>WED-S0</td>
+            </tr>
+            <tr>
+                <td>08:50</td>
+                <td>MON-S1</td>
+                <td>TUE-S1</td>
+                <td>WED-S1</td>
+            </tr>
+            <tr>
+                <td>09:50</td>
+                <td>MON-S2</td>
+                <td>TUE-S2</td>
+                <td>WED-S2</td>
+            </tr>
+        </table>
+
+        <h1>Even Weeks</h1>
+        <table id="week-even">
+            <tr>
+                <td>TIME</td>
+                <td>MON</td>
+                <td>TUE</td>
+                <td>WED</td>
+            </tr>
+            <tr>
+                <td>08:00</td>
+                <td>MON-S0</td>
+                <td>TUE-S0</td>
+                <td>WED-S0</td>
+            </tr>
+            <tr>
+                <td>08:50</td>
+                <td>MON-S1</td>
+                <td>TUE-S1</td>
+                <td>WED-S1</td>
+            </tr>
+            <tr>
+                <td>09:50</td>
+                <td>MON-S2</td>
+                <td>TUE-S2</td>
+                <td>WED-S2</td>
+            </tr>
+        </table>
+
+
+
         <script src="dom.js"></script>
     </body>
 </html>

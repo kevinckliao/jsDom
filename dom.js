@@ -16,12 +16,12 @@ var msgWeek = '今天 ' + dateNow.toLocaleDateString() + ' 第' + weekNo + '周 
 if ((weekNo % 2) == 0) {  msgWeek += " 偶數周"; } 
 else { msgWeek += " 奇數周"; }
 
-console.log(msgWeek);
+//console.log(msgWeek);
 
 //
 // check which session this time is
 //
-console.log('Now: ' + Date().toLocaleString().slice(16,21));
+//console.log('Now: ' + Date().toLocaleString().slice(16,21));
 
 function sessionNum () {
   const timeStrNow =  Date().toLocaleString().slice(16,21) ;
@@ -29,7 +29,19 @@ function sessionNum () {
   if ( timeStrNow >= "15:00" && timeStrNow <="15:40") { return 3; }
   else return 0;
 }
-console.log( 'Current Session Number is ' + sessionNum());
+//console.log( 'Current Session Number is ' + sessionNum());
 
+//
+// get Table item
+//
+function markSess (weekType, dayNum, sessNum) {
+  var tableEl = document.getElementsByTagName('table') ;
+  console.log(tableEl);
 
+  cellEl = tableEl[weekType].getElementsByTagName('td');
+  //console.log(cellEl[ 5 + (dayNum-1) + sessNum*4]); 
+  cellEl[ 5 + (dayNum-1) + sessNum*4].style.backgroundColor = '#99999999' ;
+}
+//tableEl[5].style.backgroundColor = '#99999999' ;
 
+markSess(0,2,1);
